@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+b{
+	font-size: 20px;
+	position: absolute;
+	top: 10px;
+}
+input{
+	height: 25px;
+	width: 60px;
+	border: none;
+	font-weight: bold;
+	left: 250px;
+    position: absolute;
+}
+#div1{
+	width: 60px;
+	height: 60px;
+	border: 3px solid #000;
+	position: absolute;
+	top: 60px;
+	left: 60px;
+}
+#div2{
+	width: 400px;
+	height: 400px;
+	border: 20px solid black;
+	position: absolute;
+	left: 45%;
+	top: 30%;
+	font-size: 20px;
+	display: none;
+	background-color: #ccc;
+	z-index: 1;
+}
+#btn1{
+	position: absolute;
+	top: 50px;
+
+}
+#btn2{
+	position: absolute;
+	top: 150px;
+
+}
+#btn2 div:hover,#btn3 div:hover{
+    background-color: yellow;
+    color: black;
+}
+#btn3{
+	position: absolute;
+	top: 250px;
+
+}
+#btn4{
+	position: absolute;
+	top: 350px;
+
+}
+#btn4 div:hover{
+	background-color: white;
+	color: black;
+}
+#red{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 170px;
+	top: -2px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	background-color: pink;
+	cursor: pointer;
+}
+#yellow{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 250px;
+	top: -2px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	background-color: orange;
+	cursor: pointer;
+}
+#blue{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 330px;
+	top: -2px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	background-color: blue;
+	cursor: pointer;
+}
+#b21{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 170px;
+	top: -2px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	background-color: grey;
+	cursor: pointer;
+	border: 2px solid #ccc;
+	font-size: 15px;
+}
+#b22{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 250px;
+	top: -2px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	background-color: grey;
+	cursor: pointer;
+	border: 2px solid #ccc;
+	font-size: 15px;
+}
+#b23{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 330px;
+	top: -2px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	background-color: grey;
+	cursor: pointer;
+	border: 2px solid #ccc;
+	font-size: 15px;
+}
+#b31{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 170px;
+	top: -2px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	background-color: grey;
+	cursor: pointer;
+	border: 2px solid #ccc;
+	font-size: 15px;
+}
+#b32{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 250px;
+	top: -2px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	background-color: grey;
+	cursor: pointer;
+	border: 2px solid #ccc;
+	font-size: 15px;
+}
+#b33{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 330px;
+	top: -2px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	background-color: grey;
+	cursor: pointer;
+	border: 2px solid #ccc;
+	font-size: 15px;
+}
+#recover{
+	width: 60px;
+	height: 30px;
+	position: absolute;
+	left: 100px;
+	top: -2px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	background-color: black;
+	cursor: pointer;
+	border: 2px solid #ccc;
+	font-size: 15px;
+}
+#done{
+	width: 60px;
+	height: 30px;
+	position: absolute;
+	left: 250px;
+	top: -2px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	background-color: black;
+	cursor: pointer;
+	border: 2px solid #ccc;
+	font-size: 15px;
+}
+
+	</style>
+	<script>
+window.onload=function(){
+     var oSet=document.getElementById('set');
+     var oDiv2=document.getElementById('div2');
+     var oRed=document.getElementById('red');
+     var oYellow=document.getElementById('yellow');
+     var oBlue=document.getElementById('blue');
+     var oDiv1=document.getElementById('div1');
+     var oB21=document.getElementById('b21');
+     var oB22=document.getElementById('b22');
+     var oB23=document.getElementById('b23');
+     var oB31=document.getElementById('b31');
+     var oB32=document.getElementById('b32');
+     var oB33=document.getElementById('b33');
+     var oRecover=document.getElementById('recover');
+     var oDone=document.getElementById('done');
+     var oBody=document.getElementsByTagName('body')[0];
+     oSet.onclick=function()
+     {
+     	if(oDiv2.style.display=='block'){
+            oDiv2.style.display='none';
+            oBody.style.background='white';    	
+     	}else{
+     		oDiv2.style.display='block';
+     		oBody.style.background='grey';
+     	}
+     }
+     oRed.onclick=function(){
+         oDiv1.style.background='red';
+     }
+     oYellow.onclick=function(){
+         oDiv1.style.background='yellow';
+     }
+     oBlue.onclick=function(){
+         oDiv1.style.background='blue';
+     }
+     oB21.onclick=function(){
+     	oDiv1.style.width='200px';
+     }
+     oB22.onclick=function(){
+     	oDiv1.style.width='300px';
+     }
+     oB23.onclick=function(){
+     	oDiv1.style.width='400px';
+     }
+     oB31.onclick=function(){
+     	oDiv1.style.height='200px';
+     }
+     oB32.onclick=function(){
+     	oDiv1.style.height='300px';
+     }
+     oB33.onclick=function(){
+     	oDiv1.style.height='400px';
+     }
+     oRecover.onclick=function(){
+     	oDiv1.style.width='60px';
+     	oDiv1.style.height='60px';
+     	oDiv1.style.borderWidth='3px';
+     	oDiv1.style.background='white';
+     }
+     oDone.onclick=function(){
+     	oDiv2.style.display='none';
+     	oBody.style.background='white'; 
+     }
+}
+
+	</script>
+</head>
+<body>
+	<b>请为下面的div设置样式:</b><input id="set" type="button" value="设置">
+	<div id="div1"></div>
+	
+<div id="div2">
+
+<div id="btn1">
+请选择背景颜色：
+<div id="red">红</div>
+<div id="yellow">黄</div>
+<div id="blue">蓝</div>
+</div>
+<div id="btn2">
+请选择宽（px）：
+<div id="b21">200</div>
+<div id="b22">300</div>
+<div id="b23">400</div>
+</div>
+<div id="btn3">
+请选择高（px）：
+<div id="b31">200</div>
+<div id="b32">300</div>
+<div id="b33">400</div>
+</div>
+<div id="btn4">
+<div id="recover">恢复</div>
+<div id="done">确认</div>
+</div>
+</div>
+</body>
+</html>
